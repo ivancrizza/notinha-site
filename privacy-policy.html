@@ -1,154 +1,535 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProKetoNota — Politica de Privacidade</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #2D2D2D;
-            background-color: #FFF8F0;
-            padding: 24px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #5D4037;
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-        }
-        h2 {
-            color: #5D4037;
-            font-size: 1.3rem;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #D7CCC8;
-            padding-bottom: 4px;
-        }
-        p, li { margin-bottom: 10px; }
-        ul { padding-left: 24px; }
-        .updated {
-            color: #8D6E63;
-            font-size: 0.9rem;
-            margin-bottom: 24px;
-        }
-        .contact {
-            background-color: #EFEBE9;
-            border-radius: 8px;
-            padding: 16px;
-            margin-top: 24px;
-        }
-        a { color: #5D4037; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notinha — Política de Privacidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald:        #0B6E4F;
+      --emerald-deep:   #0A5239;
+      --emerald-dark:   #043524;
+      --emerald-light:  #E3F0EA;
+      --espresso:       #1A1914;
+      --espresso-deep:  #0C0B08;
+      --espresso-light: #2E2A22;
+      --espresso-pale:  #E8E3D8;
+      --linen:          #F4F1EA;
+      --linen-light:    #FAF8F3;
+      --linen-dark:     #EDEAE3;
+      --linen-outline:  #D5CFC0;
+      --ink-mid:        #6B665B;
+      --ink-muted:      #9E988B;
+      --coral:          #B84A3E;
+      --coral-light:    #FBEEEA;
+      --emerald-bright: #4ADE80;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--espresso-light);
+      background-color: var(--linen);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background-color: var(--espresso);
+      padding: 52px 24px 44px;
+      text-align: center;
+      border-bottom: 3px solid var(--emerald);
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 999px;
+      padding: 6px 18px 6px 8px;
+      margin-bottom: 22px;
+    }
+
+    .app-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--emerald);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+
+    .app-badge span {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.9rem, 5vw, 2.7rem);
+      color: var(--linen-light);
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .updated {
+      color: var(--ink-muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+
+    .intro {
+      background: var(--emerald-light);
+      border-left: 3px solid var(--emerald);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin-bottom: 52px;
+      font-size: 0.93rem;
+      color: var(--emerald-deep);
+      line-height: 1.7;
+    }
+
+    .intro strong { color: var(--emerald-dark); font-weight: 500; }
+
+    /* ── SECTION ── */
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 1.28rem;
+      color: var(--espresso);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::before {
+      content: attr(data-n);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: var(--emerald);
+      color: #fff;
+      border-radius: 50%;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.71rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-muted);
+      margin: 22px 0 10px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      font-size: 0.92rem;
+    }
+
+    /* ── LIST ── */
+    ul {
+      list-style: none;
+      padding: 0;
+      border: 1px solid var(--linen-outline);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    ul li {
+      font-size: 0.91rem;
+      color: var(--espresso-light);
+      padding: 12px 16px 12px 40px;
+      border-bottom: 1px solid var(--linen-outline);
+      position: relative;
+      background: var(--linen-light);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 16px;
+      color: var(--emerald);
+      font-weight: 600;
+    }
+
+    ul li strong { color: var(--espresso); font-weight: 500; }
+
+    /* ── TAGS ── */
+    .tag {
+      display: inline-block;
+      background: var(--linen-dark);
+      color: var(--ink-mid);
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-size: 0.71rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-left: 5px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
+    .tag.premium {
+      background: var(--emerald-light);
+      color: var(--emerald-deep);
+    }
+
+    /* ── PERMISSION CARDS ── */
+    .perm-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .perm-card {
+      background: var(--linen-light);
+      border: 1px solid var(--linen-outline);
+      border-radius: 10px;
+      padding: 16px 14px;
+    }
+
+    .perm-card .p-icon { font-size: 1.35rem; margin-bottom: 8px; display: block; }
+    .perm-card .p-name { font-weight: 500; font-size: 0.84rem; color: var(--espresso); display: block; margin-bottom: 4px; }
+    .perm-card .p-desc { font-size: 0.77rem; color: var(--ink-mid); line-height: 1.5; display: block; }
+
+    /* ── RIGHTS GRID ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .right-card {
+      border: 1px solid var(--linen-outline);
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+      background: var(--linen-light);
+    }
+
+    .right-card .r-icon { font-size: 1.35rem; margin-bottom: 6px; display: block; }
+    .right-card .r-label { font-weight: 500; font-size: 0.82rem; color: var(--espresso); display: block; }
+    .right-card .r-sub { font-size: 0.74rem; color: var(--ink-muted); margin-top: 4px; line-height: 1.45; display: block; }
+
+    /* ── CONTACT BOX ── */
+    .contact-box {
+      background: var(--espresso);
+      border-radius: 12px;
+      padding: 28px 28px 20px;
+    }
+
+    .contact-intro {
+      color: rgba(232, 227, 216, 0.5);
+      font-size: 0.87rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .contact-row:last-child { border-bottom: none; padding-bottom: 4px; }
+
+    .c-label {
+      color: var(--ink-muted);
+      font-size: 0.71rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+
+    .c-value {
+      color: var(--espresso-pale);
+      font-size: 0.9rem;
+    }
+
+    .c-value a {
+      color: var(--emerald-bright);
+      text-decoration: none;
+    }
+
+    .c-value a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--linen-outline);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 560px) {
+      header { padding: 36px 20px 32px; }
+      main { padding: 36px 20px 64px; }
+      .perm-grid { grid-template-columns: 1fr 1fr; }
+      .rights-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 380px) {
+      .perm-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<h1>Politica de Privacidade</h1>
-<p class="updated">Ultima atualizacao: Abril de 2026</p>
+  <header>
+    <div class="app-badge">
+      <div class="app-icon">🧾</div>
+      <span>Notinha · Android</span>
+    </div>
+    <h1>Política de Privacidade</h1>
+    <p class="updated">Última atualização: Abril de 2026</p>
+  </header>
 
-<p>
-    O <strong>ProKetoNota</strong> ("nos", "nosso" ou "aplicativo") respeita a sua privacidade.
-    Esta politica descreve quais dados coletamos, como os utilizamos e quais sao os seus direitos.
-</p>
+  <main>
 
-<h2>1. Dados que coletamos</h2>
+    <div class="intro">
+      O <strong>Notinha</strong> respeita a sua privacidade. Esta política descreve quais dados coletamos,
+      como os utilizamos e quais são os seus direitos de acordo com a
+      <strong>Lei Geral de Proteção de Dados (LGPD)</strong>.
+    </div>
 
-<p><strong>1.1 Dados fornecidos por voce</strong></p>
-<ul>
-    <li><strong>Fotos de recibos</strong> — capturadas pela camera ou selecionadas da galeria para digitalizacao via OCR.</li>
-    <li><strong>Dados de recibos</strong> — valor, estabelecimento, categoria, data, forma de pagamento e observacoes inseridos ou editados manualmente.</li>
-    <li><strong>Conta Google</strong> — se voce optar por fazer login, coletamos nome, email e foto de perfil fornecidos pelo Google Sign-In.</li>
-</ul>
+    <!-- 1 -->
+    <section>
+      <h2 data-n="1">Dados que coletamos</h2>
 
-<p><strong>1.2 Dados coletados automaticamente</strong></p>
-<ul>
-    <li><strong>Dados de uso</strong> — informacoes anonimas sobre como o app e utilizado (telas visitadas, funcionalidades usadas) para melhorar a experiencia.</li>
-    <li><strong>Dados de falha</strong> — relatorios de crash anonimos para corrigir problemas tecnicos.</li>
-</ul>
+      <h3>Fornecidos por você</h3>
+      <ul>
+        <li><strong>Fotos de recibos</strong> — capturadas pela câmera ou selecionadas da galeria para digitalização via OCR.</li>
+        <li><strong>Dados de recibos</strong> — valor, estabelecimento, categoria, data, forma de pagamento e observações inseridos ou editados manualmente.</li>
+        <li><strong>Conta Google</strong> — se você optar por fazer login, coletamos nome, e-mail e foto de perfil fornecidos pelo Google Sign-In.</li>
+      </ul>
 
-<p><strong>1.3 Dados que NAO coletamos</strong></p>
-<ul>
-    <li>Nao coletamos dados bancarios, senhas ou numeros de cartao de credito.</li>
-    <li>Nao coletamos dados de localizacao (GPS).</li>
-    <li>Nao coletamos contatos ou historico de ligacoes.</li>
-</ul>
+      <h3>Coletados automaticamente</h3>
+      <ul>
+        <li><strong>Dados de falha</strong> — relatórios de crash anônimos para corrigir problemas técnicos.</li>
+      </ul>
 
-<h2>2. Como usamos seus dados</h2>
-<ul>
-    <li><strong>Processamento de recibos</strong> — as fotos sao processadas localmente no dispositivo usando Google ML Kit para extrair texto (OCR). Nenhuma imagem e enviada para nossos servidores para o processamento OCR basico.</li>
-    <li><strong>Analise por IA (Premium)</strong> — se voce for assinante Premium, o texto extraido do recibo pode ser enviado para um servico de inteligencia artificial (via servidores seguros) para melhorar a precisao da categorizacao. Nenhuma imagem e enviada, apenas o texto ja extraido.</li>
-    <li><strong>Backup na nuvem (Premium)</strong> — se ativado, seus recibos sao sincronizados com servidores seguros (Supabase) para backup e acesso em multiplos dispositivos.</li>
-    <li><strong>Melhoria do aplicativo</strong> — dados anonimos de uso e crash nos ajudam a corrigir problemas e melhorar funcionalidades.</li>
-</ul>
+      <h3>Dados que NÃO coletamos</h3>
+      <ul>
+        <li>Não coletamos dados bancários, senhas ou números de cartão de crédito.</li>
+        <li>Não coletamos dados de localização (GPS).</li>
+        <li>Não coletamos contatos ou histórico de ligações.</li>
+        <li>Não realizamos coleta de dados de uso para fins analíticos.</li>
+      </ul>
+    </section>
 
-<h2>3. Armazenamento e seguranca</h2>
-<ul>
-    <li>Seus dados sao armazenados <strong>localmente no dispositivo</strong> por padrao.</li>
-    <li>Se voce ativar o backup na nuvem, os dados sao armazenados em servidores seguros com criptografia em transito (TLS/SSL) e em repouso.</li>
-    <li>Utilizamos praticas de seguranca padrao da industria para proteger seus dados.</li>
-</ul>
+    <!-- 2 -->
+    <section>
+      <h2 data-n="2">Como usamos seus dados</h2>
+      <ul>
+        <li>
+          <strong>Processamento de recibos (OCR)</strong> — as fotos são processadas
+          <em>localmente no dispositivo</em> usando o Google ML Kit. Nenhuma imagem
+          é enviada a servidores externos no processamento OCR básico.
+        </li>
+        <li>
+          <strong>Análise por IA</strong><span class="tag premium">Premium</span> —
+          assinantes Premium podem ter o <em>texto já extraído</em> do recibo (nunca a imagem)
+          enviado à <strong>OpenAI</strong> via Supabase Edge Functions para melhorar
+          a precisão da categorização automática.
+        </li>
+        <li>
+          <strong>Backup na nuvem</strong><span class="tag premium">Premium</span> —
+          se ativado, seus recibos são sincronizados com servidores seguros
+          (<strong>Supabase</strong> — PostgreSQL + Storage) para backup e acesso
+          em múltiplos dispositivos.
+        </li>
+        <li>
+          <strong>Correção de problemas</strong> — relatórios de crash anônimos ajudam
+          a identificar e corrigir falhas técnicas.
+        </li>
+      </ul>
+    </section>
 
-<h2>4. Compartilhamento de dados</h2>
-<p>
-    <strong>Nao vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros</strong> para fins de marketing ou publicidade.
-</p>
-<p>Compartilhamos dados apenas nas seguintes situacoes:</p>
-<ul>
-    <li><strong>Google Play Billing</strong> — para processar assinaturas Premium, o Google recebe informacoes de pagamento diretamente (nos nao temos acesso ao seu cartao).</li>
-    <li><strong>Provedores de infraestrutura</strong> — utilizamos Supabase para armazenamento em nuvem e OpenAI para analise por IA, que atuam como processadores de dados sob nossas instrucoes.</li>
-    <li><strong>Obrigacao legal</strong> — podemos divulgar dados se exigido por lei ou ordem judicial.</li>
-</ul>
+    <!-- 3 -->
+    <section>
+      <h2 data-n="3">Armazenamento e segurança</h2>
+      <ul>
+        <li>
+          <strong>Dados locais</strong> — por padrão, todos os seus dados ficam armazenados
+          exclusivamente no seu dispositivo (banco de dados Room local).
+        </li>
+        <li>
+          <strong>Backup na nuvem (Premium)</strong> — armazenado nos servidores do
+          <strong>Supabase</strong> com criptografia em trânsito (TLS/SSL) e em repouso.
+          O Supabase atua como processador de dados sob nossas instruções.
+        </li>
+        <li>
+          <strong>IA (Premium)</strong> — o texto processado pela <strong>OpenAI</strong>
+          não é utilizado para treinar modelos, de acordo com a política de uso da API da OpenAI.
+        </li>
+      </ul>
+    </section>
 
-<h2>5. Permissoes do aplicativo</h2>
-<ul>
-    <li><strong>Camera</strong> — necessaria para fotografar recibos e notas fiscais.</li>
-    <li><strong>Armazenamento / Fotos</strong> — necessaria para acessar fotos de recibos ja salvas na galeria.</li>
-    <li><strong>Internet</strong> — necessaria para backup na nuvem, analise por IA e verificacao de assinatura Premium.</li>
-</ul>
+    <!-- 4 -->
+    <section>
+      <h2 data-n="4">Compartilhamento de dados</h2>
+      <p><strong>Não vendemos, alugamos ou compartilhamos seus dados pessoais</strong> com terceiros para fins de marketing ou publicidade.</p>
+      <ul>
+        <li>
+          <strong>Google Play Billing</strong> — o Google recebe informações de pagamento
+          diretamente para processar assinaturas Premium. Não temos acesso ao seu cartão
+          ou dados bancários.
+        </li>
+        <li>
+          <strong>Supabase</strong> — infraestrutura de armazenamento em nuvem e execução
+          das funções de IA (apenas usuários Premium com backup ativado).
+        </li>
+        <li>
+          <strong>OpenAI</strong> — processa o texto extraído dos recibos para categorização
+          automática (apenas usuários Premium). Não recebe imagens nem dados pessoais
+          identificáveis.
+        </li>
+        <li>
+          <strong>Obrigação legal</strong> — podemos divulgar dados se exigido por lei
+          ou ordem judicial.
+        </li>
+      </ul>
+    </section>
 
-<h2>6. Seus direitos</h2>
-<p>Voce tem o direito de:</p>
-<ul>
-    <li><strong>Acessar</strong> todos os dados armazenados no aplicativo (visivel diretamente no app).</li>
-    <li><strong>Exportar</strong> seus dados como planilha XLSX (Excel).</li>
-    <li><strong>Excluir</strong> todos os seus dados a qualquer momento (Configuracoes > Limpar dados).</li>
-    <li><strong>Cancelar</strong> sua conta e solicitar a exclusao de dados na nuvem entrando em contato conosco.</li>
-</ul>
-<p>
-    De acordo com a <strong>Lei Geral de Protecao de Dados (LGPD)</strong>, voce tambem pode solicitar informacoes sobre o tratamento dos seus dados, correcao de dados incompletos ou imprecisos, e a portabilidade dos seus dados.
-</p>
+    <!-- 5 -->
+    <section>
+      <h2 data-n="5">Permissões do aplicativo</h2>
+      <div class="perm-grid">
+        <div class="perm-card">
+          <span class="p-icon">📷</span>
+          <span class="p-name">Câmera</span>
+          <span class="p-desc">Fotografar recibos e notas fiscais.</span>
+        </div>
+        <div class="perm-card">
+          <span class="p-icon">🖼️</span>
+          <span class="p-name">Fotos / Armazenamento</span>
+          <span class="p-desc">Acessar fotos de recibos já salvas na galeria.</span>
+        </div>
+        <div class="perm-card">
+          <span class="p-icon">🌐</span>
+          <span class="p-name">Internet</span>
+          <span class="p-desc">Backup na nuvem, IA e verificação de assinatura Premium.</span>
+        </div>
+      </div>
+    </section>
 
-<h2>7. Retencao de dados</h2>
-<ul>
-    <li><strong>Dados locais</strong> — permanecem no dispositivo ate voce excluir o app ou limpar os dados.</li>
-    <li><strong>Dados na nuvem</strong> — mantidos enquanto sua conta estiver ativa. Apos exclusao da conta, os dados sao removidos em ate 30 dias.</li>
-</ul>
+    <!-- 6 -->
+    <section>
+      <h2 data-n="6">Seus direitos (LGPD)</h2>
+      <div class="rights-grid">
+        <div class="right-card">
+          <span class="r-icon">👁️</span>
+          <span class="r-label">Acessar</span>
+          <span class="r-sub">Dados visíveis diretamente no app.</span>
+        </div>
+        <div class="right-card">
+          <span class="r-icon">📤</span>
+          <span class="r-label">Exportar</span>
+          <span class="r-sub">Exporte seus dados como planilha XLSX.</span>
+        </div>
+        <div class="right-card">
+          <span class="r-icon">🗑️</span>
+          <span class="r-label">Excluir</span>
+          <span class="r-sub">Configurações → Limpar dados.</span>
+        </div>
+        <div class="right-card">
+          <span class="r-icon">✏️</span>
+          <span class="r-label">Corrigir</span>
+          <span class="r-sub">Solicite correção de dados imprecisos.</span>
+        </div>
+        <div class="right-card">
+          <span class="r-icon">📦</span>
+          <span class="r-label">Portabilidade</span>
+          <span class="r-sub">Solicite seus dados em formato estruturado.</span>
+        </div>
+        <div class="right-card">
+          <span class="r-icon">🚫</span>
+          <span class="r-label">Cancelar conta</span>
+          <span class="r-sub">Solicite exclusão da conta e dados na nuvem por e-mail.</span>
+        </div>
+      </div>
+    </section>
 
-<h2>8. Menores de idade</h2>
-<p>
-    O ProKetoNota nao e direcionado a criancas menores de 13 anos.
-    Nao coletamos intencionalmente dados de menores. Se tomarmos conhecimento de que
-    coletamos dados de uma crianca, os excluiremos imediatamente.
-</p>
+    <!-- 7 -->
+    <section>
+      <h2 data-n="7">Retenção de dados</h2>
+      <ul>
+        <li><strong>Dados locais</strong> — permanecem no dispositivo até você excluir o app ou limpar os dados manualmente.</li>
+        <li><strong>Dados na nuvem (Premium)</strong> — mantidos enquanto sua conta estiver ativa. Após exclusão da conta, removidos em até <strong>30 dias</strong>.</li>
+      </ul>
+    </section>
 
-<h2>9. Alteracoes nesta politica</h2>
-<p>
-    Podemos atualizar esta politica periodicamente. Notificaremos voce sobre mudancas
-    significativas por meio de uma atualizacao no aplicativo. A data de ultima
-    atualizacao sera sempre indicada no topo desta pagina.
-</p>
+    <!-- 8 -->
+    <section>
+      <h2 data-n="8">Menores de idade</h2>
+      <p>O Notinha não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente dados de menores. Se tomarmos conhecimento de que coletamos dados de uma criança, os excluiremos imediatamente.</p>
+    </section>
 
-<h2>10. Contato</h2>
-<div class="contact">
-    <p>Se voce tiver duvidas sobre esta politica de privacidade ou sobre seus dados, entre em contato:</p>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:proketonota@gmail.com">proketonota@gmail.com</a></li>
-        <li><strong>Desenvolvedor:</strong> Ivan Crizza Alineri</li>
-    </ul>
-</div>
+    <!-- 9 -->
+    <section>
+      <h2 data-n="9">Alterações nesta política</h2>
+      <p>Podemos atualizar esta política periodicamente. Notificaremos você sobre mudanças significativas por meio de uma atualização no aplicativo. A data de última atualização será sempre indicada no topo desta página.</p>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <h2 data-n="10">Contato</h2>
+      <div class="contact-box">
+        <span class="contact-intro">Dúvidas sobre privacidade ou sobre seus dados? Fale conosco:</span>
+        <div class="contact-row">
+          <span class="c-label">E-mail</span>
+          <span class="c-value"><a href="mailto:ivancrizza@gmail.com">ivancrizza@gmail.com</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">Desenvolvedor</span>
+          <span class="c-value">Ivan Crizza Alineri</span>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">Aplicativo</span>
+          <span class="c-value">Notinha — Scanner de Notas Fiscais</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Ivan Crizza Alineri · Notinha · Todos os direitos reservados
+  </footer>
 
 </body>
 </html>
